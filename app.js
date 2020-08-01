@@ -3,6 +3,8 @@ const express = require('express');
 const http = require('http');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+const PORT = process.env.PORT || 3000;
+
 
 const login = require('./controller/login');
 const logout = require('./controller/logout');
@@ -34,6 +36,4 @@ app.use('/login', login);
 app.use('/chat', chat);
 app.use('/logout', logout);
 
-server.listen(3000, () => {
-    console.log('server running...');
-});
+server.listen(PORT);
