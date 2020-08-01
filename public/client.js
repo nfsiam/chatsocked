@@ -15,7 +15,8 @@ const appendMsg = (msgObj) => {
 
     const timeSpan = document.createElement('span');
     timeSpan.classList.add('timeSpan');
-    timeSpan.innerText = msgObj.time;
+    timeSpan.innerText = moment(msgObj.time).format('hh:mm:ss a');
+
 
 
     const usernameSpan = document.createElement('span');

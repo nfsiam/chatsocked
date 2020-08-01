@@ -26,6 +26,8 @@ app.use(express.static('public'));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 // jquery
 app.use(express.static(__dirname + '/node_modules/jquery/dist'));
+//moment js
+app.use(express.static(__dirname + '/node_modules/moment/min'));
 
 
 app.use(bodyParser());

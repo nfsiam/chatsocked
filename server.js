@@ -16,7 +16,8 @@ module.exports = (server) => {
         //     msg: 'Welcome to ChatSock chat service...'
         // });
         socket.on('msgEvent', (msgObj) => {
-            msgObj['time'] = moment().format('hh:mm:ss a');
+            msgObj['time'] = moment().valueOf();
+
             while (global.msgQueue.length > 9) {
                 global.msgQueue.shift();
             }
