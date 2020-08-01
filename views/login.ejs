@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .container {
+            height: 80vh;
+            width: 400px;
+
+        }
+
+        @media(max-width: 800px) {
+            button[type="submit"] {
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <form class="chat-form-row" autocomplete="off" spellcheck="false" method="post">
+            <br>
+            <div class="row">
+                <div class="col-md-9">
+                    <input type="text" name="username" id="username" class="form-control"
+                        placeholder="your name here..." required autofocus>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary btn-block" type="submit">JOIN</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+</body>
+
+</html>
